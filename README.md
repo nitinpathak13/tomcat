@@ -1,4 +1,3 @@
 # tomcat
 
-TODO: Enter the cookbook description here.
-
+Cookbook to install and configure tomcat on ubuntu
