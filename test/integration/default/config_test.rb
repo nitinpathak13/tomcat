@@ -1,4 +1,4 @@
-# InSpec test for recipe tomcat::users
+# InSpec test for recipe tomcat::config
 
 # The InSpec reference, with examples and extensive documentation, can be
 # found at https://www.inspec.io/docs/reference/resources/
