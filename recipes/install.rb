@@ -9,7 +9,7 @@ root = node['tomcat']['root']
 
 # Prerequisites
 apt_update
-package %w( openjdk-11-jdk nginx)
+package %w( openjdk-11-jdk)
 
 user 'tomcat' do
   system true

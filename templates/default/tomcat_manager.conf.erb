@@ -1,0 +1,21 @@
+<VirtualHost *:81>
+    ServerName test.linuxmarvel.com
+    ServerAdmin admin@linuxmarvel.com
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    ProxyRequests Off
+    <Proxy *>
+      Order deny,allow
+      Allow from all
+    </Proxy>
+
+    ProxyPass / http://localhost:8081/
+    ProxyPassReverse / http://localhost:8081/
+
+    <Location />
+      Order allow,deny
+      Allow from all
+    </Location>
+
+</VirtualHost>

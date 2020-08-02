@@ -25,3 +25,10 @@ end
 service 'tomcat' do
   subscribes :restart, "template[#{root}/conf/tomcat-users.xml]", :immediately
 end
+
+# Update this section to change login controls
+# This does not require restarting tomcat server
+
+template "#{root}/webapps/host-manager/META-INF/context.xml" do
+  source 'host_manager-context.xml.erb'
+end
